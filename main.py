@@ -61,3 +61,25 @@ def display_menu():
     print("5.统计课程成绩")
     print("6.退出")
     
+def main():
+    students=[]
+    while True:
+        display_menu()
+        choice=input("请输入选项：")
+        if choice=='1':
+            add_student(students)
+        elif choice=='2':
+            query_by_name(students)
+        elif choice=='3':
+            query_by_student_id(students)
+        elif choice=='4':
+            query_by_course(students)
+        elif choice=='5':
+            get_course_statistics(students)
+        elif choice'6':
+            print("退出系统")
+            break
+        else:
+            print("无效选项，请重新输入")
+
+
