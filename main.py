@@ -51,3 +51,13 @@ def get_course_statistics(students):
     print(f"平均分：{average:2f}")
     print(f"最高分：{max_grade}")
     print(f"最低分：{min_grade}")
+
+def display_menu():
+    print("\n学生成绩管理系统")
+    print("1.录入学生成绩")
+    print("2.按姓名查询成绩")
+    print("3.按学号查询成绩")
+    print("4.按课程查询成绩")
+    print("5.统计课程成绩")
+    print("6.退出")
+    
