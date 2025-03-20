@@ -17,4 +17,26 @@ def add_students:
             'grade':grade
             })
         print("成绩录入成功！")
-                
+
+def query_by_name(students):
+    name=input("请输入学生姓名：")
+    results=[student for student in students if student['name']==name]
+    if results:
+        for result in results:
+            print(result)
+        else:
+            print("未找到相关记录")
+
+def query_by_student_id(students):
+    student_id=input("请输入学号：")
+    results=[student for student in students if student['student_id']==student_id]                                                      if results:                                                                                                                 for result in results:                                                                                                      print(result)                                                                                                       else:
+                        print("未找到相关记录")
+
+def query_by_course(students):
+    course=input("请输入课程名称：")
+    results=[student for student in students if student['course']==course]                                                      if results:                                                                                                                 for result in results:                                                                                                      print(result)                                                                                                       else:
+                print("未找到相关记录")
+
+
+
+
