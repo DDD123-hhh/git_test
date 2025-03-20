@@ -37,6 +37,17 @@ def query_by_course(students):
     results=[student for student in students if student['course']==course]                                                      if results:                                                                                                                 for result in results:                                                                                                      print(result)                                                                                                       else:
                 print("未找到相关记录")
 
+def get_course_statistics(students):
+    course=input("请输入课程名称：")
+    grade=[student['grade']for student in students if student['course']==course]
+    if not grade:
+        print("未找到该课程的成绩记录")
+        return
+    average=sum(grades)/len(grades)
+    max_grade=max(grades)
+    min_grade=min(grades)
 
-
-
+    print(f"课程：{course}")
+    print(f"平均分：{average:2f}")
+    print(f"最高分：{max_grade}")
+    print(f"最低分：{min_grade}")
